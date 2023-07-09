@@ -1,0 +1,142 @@
+.reg-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 34px 96px 34px;
+    gap: 22px;
+}
+
+.reg {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+
+    &_heading {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: $colorSectionDark;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    &_place {
+        padding: 13px 17px 16px;
+        border: 1px solid #a4a4a4;
+        outline: none;
+        margin-bottom: 20px;
+
+        &::placeholder {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            color: #b1b1b1;
+        }
+    }
+
+    &_gender {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 13px;
+        color: $colorTextDark;
+        margin-top: 11px;
+        margin-bottom: 33px;
+        display: flex;
+        gap: 10px;
+
+        #option2 {
+            margin-left: 15px;
+        }
+    }
+
+    &_text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: #b1b1b1;
+    }
+
+    &_button {
+        padding: 16px 29px;
+        max-width: 170px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 19px;
+        color: $colorSectionLight;
+        border: none;
+        background-color: $colorSelectSite;
+        transition: background-color $transitionSpeed;
+        position: relative;
+        margin-top: 39px;
+
+        &:hover {
+            background-color: #cf3348;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            box-shadow: inset 0 0 0 35px $colorSelectSite;
+        }
+
+        &:active:after {
+            animation: animate-click 0.1s ease-out forwards;
+            display: block;
+        }
+
+        & svg {
+            margin-left: 12px;
+        }
+    }
+}
+
+.reg-info {
+    max-width: 652px;
+
+    &_title {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: $colorTextDark;
+        margin-bottom: 22px;
+    }
+
+    &_heading {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: $colorTextDark;
+        margin-bottom: 22px;
+    }
+
+    &_list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &_item {
+        list-style-type: none;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        color: $colorTextDark;
+
+        &::before {
+            content: url("img/Vector.svg");
+            margin-right: 22px;
+        }
+    }
+}
